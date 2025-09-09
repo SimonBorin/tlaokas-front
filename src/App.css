@@ -1,0 +1,126 @@
+/* Общий фон */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: #1e1e1e;
+  color: #fff;
+  font-family: sans-serif;
+}
+
+/* Центрирование */
+.center {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Основная карточка */
+.card {
+  width: 480px;
+  min-height: 600px;
+  background: #2e2e2e;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Картинка */
+.cover-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* Контейнер для формы */
+.form-body {
+  width: 100%;
+  padding: 1.2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Оформление текстовых полей и кнопок */
+.form-body textarea,
+.form-body input[type="text"],
+.form-body button {
+  width: 80%; /* 👈 вот ключевой момент: чуть уже карточки */
+  max-width: 400px;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 1rem;
+  background: rgba(27, 27, 27, 0.7);
+  color: white;
+  border: 1px solid #555;
+  border-radius: 6px;
+}
+
+input[type="text"] {
+  height: 40px;
+  padding: 10px;
+  font-family: monospace;
+  font-size: 0.9rem;
+  background: rgba(20, 20, 20, 0.7);
+  color: white;
+  border: 1px solid #444;
+  border-radius: 6px;
+}
+
+/* Кнопки */
+button {
+  padding: 10px;
+  font-weight: bold;
+  background: rgba(100, 100, 100, 0.5);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: rgba(200, 200, 200, 0.3);
+}
+
+/* Блок с результатами */
+.result {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Уведомление */
+.toast-container {
+  height: 24px;
+  margin-top: 10px;
+}
+
+.toast {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #8f8;
+}
+
+.toast.visible {
+  opacity: 1;
+}
+
+.toast.hidden {
+  opacity: 0;
+}
