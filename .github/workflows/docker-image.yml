@@ -30,4 +30,4 @@ jobs:
 
       - name: Push Docker image
         run: |
-          docker push mrblooomberg/thelostartofkeepingasecret:${{ steps.version.outputs.tag }}
+          docker push mrblooomberg/thelostartofkeepingasecret-front:${{ steps.version.outputs.tag }}
