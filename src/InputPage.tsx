@@ -8,7 +8,7 @@ function InputPage() {
     const [copied, setCopied] = useState(false)
 
     const handleSubmit = async () => {
-        const response = await fetch('http://localhost:8080/secret', {
+        const response = await fetch('/api/secret', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ secret }),

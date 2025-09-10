@@ -14,7 +14,7 @@ function OutputPage() {
         if (fetched.current || !id) return
         fetched.current = true
 
-        fetch(`http://localhost:8080/secret/${id}`)
+        fetch(`/api/secret/${id}`)
             .then((res) => {
                 if (!res.ok) throw new Error()
                 return res.text()
