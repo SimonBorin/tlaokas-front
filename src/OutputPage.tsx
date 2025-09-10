@@ -34,7 +34,7 @@ function OutputPage() {
             <div className="card">
                 <img src={cover} alt="Cover" className="cover-image"/>
                 <div className="result">
-                    <textarea value={secret} readOnly/>
+                    <textarea value={secret} readOnly style={{ marginTop: '1rem' }} />
                     <button onClick={handleCopy}>Copy to clipboard</button>
                     <div className="toast-container">
                         <div className={`toast ${copied ? 'visible' : 'hidden'}`}>Copied!</div>
